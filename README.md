@@ -13,7 +13,7 @@ Fix the problem of automatic brightness failure when the 2014 mid MacBook Pro en
 ### （3）终端息屏：终端息屏再唤醒，可暂时恢复亮度控制；  
 ### （4）封装app：将息屏和唤醒指令打包进app，开机自动执行指令，可永久解决亮度控制。  
 注意其中（1）~（4），不具备自动化，每次开机都需要手动操作，很繁琐；而（4）是自动化操作，相对便捷。  
-##五、具体细节  
+＃＃　五、具体细节  
 ### （1）代码分析。  
 pmset displaysleepnow，此为立刻息屏；　　
 caffeinate -u -t s，为维持高性能状态s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  
