@@ -15,15 +15,15 @@ Fix the problem of automatic brightness failure when the 2014 mid MacBook Pro en
 注意其中（1）~（4），不具备自动化，每次开机都需要手动操作，很繁琐；而（4）是自动化操作，相对便捷。  
 ## 五、具体细节  
 ### （1）代码分析。  
-pmset displaysleepnow，此为立刻息屏；　　
-caffeinate -u -t s，为维持高性能状态s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  　
-sleep s，为等待s秒。  　
-PS.注意息屏与亮屏中间，必须留有足够的时间间隔，否则后者不会被执行！  　
-所以正确的指令应为：pmset displaysleepnow;sleep s;caffeinate -u -t s;（s表示时间，单位为秒，推荐5s），实例如下：  　
-例：pmset displaysleepnow;sleep 5;caffeinate -u -t 5;  　　
-我这里说明一下sleep的时长，为了减少亮灭切换对LCD显示器的伤害，时间间隔建议至少为5s；对于caffeinate，建议5~10s为佳，低于5s可能在开机自动化时反应不过来会出现额外黑屏时间。  　
+pmset displaysleepnow，此为立刻息屏；  
+caffeinate -u -t s，为维持高性能状态s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  
+sleep s，为等待s秒。  
+PS.注意息屏与亮屏中间，必须留有足够的时间间隔，否则后者不会被执行！  
+所以正确的指令应为：pmset displaysleepnow;sleep s;caffeinate -u -t s;（s表示时间，单位为秒，推荐5s），实例如下：  
+例：pmset displaysleepnow;sleep 5;caffeinate -u -t 5;   
+我这里说明一下sleep的时长，为了减少亮灭切换对LCD显示器的伤害，时间间隔建议至少为5s；对于caffeinate，建议5~10s为佳，低于5s可能在开机自动化时反应不过来会出现额外黑屏时间。  
 ### （2）创建自动化。  
-在ｍａｃＯＳ自带的自动操作ａｐｐ中创建应用程序，从实用工具选出终端ｓｈｅｌｌ，添加至程序；　　　
-再将（１）中的代码写入ｓｈｅｌｌ编辑框，保存为ａｐｐ；　　　
-为上述步骤生成的ａｐｐ开启辅助功能权限，然后添加开机自启动，即可。　　　
-下次重启，或者开机，登录进入系统时，该ａｐｐ就会立刻按指令关闭并重新开启显示器，恢复一切亮度控制。　　
+在macOS自带的自动操作app中创建应用程序，从实用工具选出终端shell，添加至程序；  
+再将（1）中的代码写入shell编辑框，保存为app；  
+为上述步骤生成的ａｐｐ开启辅助功能权限，然后添加开机自启动，即可。  
+下次重启，或者开机，登录进入系统时，该app就会立刻按指令关闭并重新开启显示器，恢复一切亮度控制。  
