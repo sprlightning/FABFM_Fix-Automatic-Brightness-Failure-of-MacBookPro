@@ -31,3 +31,4 @@
 &emsp;&emsp;再将（1）中的代码写入shell编辑框，保存为app；  
 &emsp;&emsp;为上述步骤生成的app开启辅助功能权限，然后添加开机自启动，即可。  
 &emsp;&emsp;下次重启，或者开机，登录进入系统时，该app就会立刻按指令关闭并重新开启显示器，恢复一切亮度控制。  
+&emsp;&emsp;<img width="354" alt="截屏2023-03-11 01 06 47" src="https://user-images.githubusercontent.com/96748320/224378591-fda265d5-1fee-49c4-816a-6eac1a4a9207.png">
