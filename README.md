@@ -41,5 +41,5 @@
 &emsp;&emsp;4）然后在“系统偏好设置/用户与群组/登录项”将本程序添加开机自启动，即可。  
 &emsp;&emsp;&emsp;&emsp;<img width="500" alt="截屏2023-03-11 01 13 27" src="https://user-images.githubusercontent.com/96748320/224380332-9ff6e6cf-f1fe-46ef-8cd2-d0b57af8f0b7.png">
 
-&emsp;&emsp;5）下次重启，或者开机，登录进入系统时，该app就会立刻按指令关闭并重新开启显示器，恢复一切亮度控制。  
+&emsp;&emsp;5）下次重启，或者开机，登录进入系统时，该app就会立刻按指令关闭并重新开启显示器，恢复一切亮度控制。并发送一条通知告诉你亮度控制已恢复正常。  
 &emsp;&emsp;&emsp;&emsp;<img width="300" alt="截屏2023-03-11 01 06 47" src="https://user-images.githubusercontent.com/96748320/224378591-fda265d5-1fee-49c4-816a-6eac1a4a9207.png">
