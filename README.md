@@ -16,7 +16,7 @@ Fix the problem of automatic brightness failure when the 2014 mid MacBook Pro en
 ## 五、具体细节  
 ### （1）代码分析。  
 pmset displaysleepnow，此为立刻息屏；　　　
-caffeinate -u -t s，为维持高性能状态s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  　
+＜ｂｒ／＞caffeinate -u -t s，为维持高性能状态s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  　
 sleep s，为等待s秒。  　
 PS.注意息屏与亮屏中间，必须留有足够的时间间隔，否则后者不会被执行！  　
 所以正确的指令应为：pmset displaysleepnow;sleep s;caffeinate -u -t s;（s表示时间，单位为秒，推荐5s），实例如下：  　
