@@ -3,7 +3,7 @@
 修复2014中期款MacBook Pro进入系统时自动亮度失效的问题。  
 Fix the problem of automatic brightness failure when the 2014 mid MacBook Pro enters the system.  
 ## 二、初始故障描述  
-根据统计，大多数MacBook Pro mid 2013~2014，以及部分2015版本，存在升级BigSur 11.2.1及更新版本（目前是11.7.4）后，开机或重启后，系统会失去对屏幕的自动亮度控制，以及手动亮度控  
+根据统计，大多数MacBook Pro mid 2013~2014，以及部分2015版本，存在升级BigSur 11.2.1及更新版本（目前是11.7.4）后，开机或重启后，系统会失去对屏幕的自动亮度控制，以及手动亮度控制  
 但是安装双系统，发现Windows10不存在亮度不可控的问题，简单来说就是Windows下亮度控制一切正常。  
 ## 三、故障分析  
 驱动加载异常。  
@@ -15,8 +15,8 @@ Fix the problem of automatic brightness failure when the 2014 mid MacBook Pro en
 注意其中（1）~（4），不具备自动化，每次开机都需要手动操作，很繁琐；而（4）是自动化操作，相对便捷。  
 ## 五、具体细节  
 ### （1）代码分析。  
-pmset displaysleepnow，此为立刻息屏；　　　
-＜ｂｒ／＞caffeinate -u -t s，为维持高性能状态s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  　
+pmset displaysleepnow，此为立刻息屏；　　
+caffeinate -u -t s，为维持高性能状态s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  　
 sleep s，为等待s秒。  　
 PS.注意息屏与亮屏中间，必须留有足够的时间间隔，否则后者不会被执行！  　
 所以正确的指令应为：pmset displaysleepnow;sleep s;caffeinate -u -t s;（s表示时间，单位为秒，推荐5s），实例如下：  　
