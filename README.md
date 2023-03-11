@@ -2,7 +2,8 @@
 ## 一、功能描述  
 &emsp;&emsp;修复2014中期款MacBook Pro进入系统时自动亮度失效的问题。  
 &emsp;&emsp;Fix the problem of automatic brightness failure when the 2014 mid MacBook Pro enters the system.  
-&emsp;&emsp;<img width="300" alt="截屏2023-03-11 01 06 47" src="https://user-images.githubusercontent.com/96748320/224380192-a48e10c3-765a-4498-bca0-09b907c1501c.png">
+&emsp;&emsp;<img width="357" alt="截屏2023-03-11 08 50 30" src="https://user-images.githubusercontent.com/96748320/224458865-4be9f78a-3d6d-4f85-bd58-7b2ba721770b.png">
+
 
 &emsp;&emsp;详细信息大家可以去哔哩哔哩观看：https://www.bilibili.com/video/BV1rs4y157b5/
 
