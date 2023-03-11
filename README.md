@@ -26,12 +26,12 @@
 ## 五、具体细节  
 ### （1）代码分析。  
 &emsp;&emsp;pmset displaysleepnow，此为立刻息屏；  
-&emsp;&emsp;caffeinate -u -t s，为维持高性能状态s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  
+&emsp;&emsp;caffeinate -u -t s，此为禁用系统睡眠s秒，执行此命令会强制开启屏幕显示，可用来亮屏；  
 &emsp;&emsp;sleep s，为等待s秒。  
 &emsp;&emsp;PS.注意息屏与亮屏中间，必须留有足够的时间间隔，否则后者不会被执行！  
 &emsp;&emsp;所以正确的指令应为：pmset displaysleepnow;sleep s;caffeinate -u -t s;（s表示时间，单位为秒，推荐5s），示例如下：  
 &emsp;&emsp;例：pmset displaysleepnow;sleep 5;caffeinate -u -t 5;   
-&emsp;&emsp;我这里说明一下sleep的时长，为了减少亮灭切换对LCD显示器的伤害，时间间隔建议至少为5s；对于caffeinate，建议5~10s为佳，低于5s可能在开机自动化时反应不过来会出现额外黑屏时间。  
+&emsp;&emsp;我这里说明一下sleep的时长，为了减少亮灭切换对LCD显示器的伤害，时间间隔建议至少为5s；对于caffeinate，建议大于等于1s即可；  
 ### （2）创建自动化。  
 &emsp;&emsp;1）在macOS自带的自动操作app中创建应用程序，从实用工具选出终端shell，添加至程序；  
 &emsp;&emsp;2）再将（1）中的代码写入shell编辑框，保存为app；  
